@@ -177,7 +177,7 @@
             display: flex;
             width: 600%; /* 6 slides */
             height: 100%;
-            animation: slideShow 30s infinite linear;
+            animation: slideShow 60s infinite linear;
             animation-timing-function: ease-in-out;
         }
 
