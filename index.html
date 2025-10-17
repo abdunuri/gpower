@@ -35,6 +35,18 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="hero-slider" aria-hidden="true">
+            <div class="slides-track" style="--hero-scroll-duration: 30s">
+                <!-- 3 unique slides -->
+                <div class="slide"><img src="images/first-bg.png" alt="" loading="eager"></div>
+                <div class="slide"><img src="images/second-bg.png" alt="" loading="lazy"></div>
+                <div class="slide"><img src="images/third-bg.png" alt="" loading="lazy"></div>
+                <!-- duplicate slides for seamless loop -->
+                <div class="slide" aria-hidden="true"><img src="images/first-bg.png" alt="" loading="lazy"></div>
+                <div class="slide" aria-hidden="true"><img src="images/second-bg.png" alt="" loading="lazy"></div>
+                <div class="slide" aria-hidden="true"><img src="images/third-bg.png" alt="" loading="lazy"></div>
+            </div>
+        </div>
         <div class="container hero-content">
             <a href="#contact" class="btn">Get In Touch</a>
             <a href="#products" class="btn btn-secondary">Our Solutions</a>

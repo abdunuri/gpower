@@ -157,33 +157,54 @@
         
         /* Hero Section */
         .hero {
-            background:url('images/first-bg.png');
-            background-size: 100% 100%;
-            color: white;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            padding: 120px 0;
             position: relative;
-            animation: slideShow 60s infinite;
-            
-            
+            height: 250px;
+            padding: 0;
+            overflow: hidden;
+            color: white;
         }
-        
-        @keyframes slideShow {
-            0% { background-image: url('images/first-bg.png'); }
-            33% { background-image: url('images/second-bg.png'); }
-            66% { background-image: url('images/third-bg.png'); }
-            100% { background-image: url('images/first-bg.png'); }
+
+        .hero-slider {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .slides-track {
+            display: flex;
+            height: 100%;
+            width: max-content;
+            will-change: transform;
+            animation: heroScroll var(--hero-scroll-duration, 30s) linear infinite;
+        }
+
+        .slide {
+            flex: 0 0 100vw; /* one full viewport width per slide */
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @keyframes heroScroll {
+            0% { transform: translateX(0); }
+            /* 3 unique slides x 100vw each = 300vw before the loop repeats */
+            100% { transform: translateX(-300vw); }
         }
         
         
         .hero-content{
-            display: none;
-            gap: 20px;
             position: absolute;
-            bottom: 10px;
-            left: 150px;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 2; /* above images */
         }
 
         /* About Section */
