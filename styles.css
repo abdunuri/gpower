@@ -174,7 +174,7 @@
             display: flex;
             width: 300%; /* 3 slides */
             height: 100%;
-            animation: slideShow 30s infinite linear;
+            animation: slideShow 9s infinite linear;
         }
 
         .slide {
