@@ -355,6 +355,36 @@
         .ps-card h3 i {
             color: var(--secondary);
         }
+
+        /* Partner Logos */
+        .partners-logos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding:0 2rem;
+            margin-left: 25px;
+            margin-top: 0;
+        }
+
+        .partner-logo{
+            display: flex;
+            height: 30px;
+            object-fit: contain;
+
+        }
+
+        .our-partners h2 {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--primary-dark);
+            font-size: 3rem;
+            font-weight: 900;
+        }
+        
         
         /* Contact Section */
         .contact {
