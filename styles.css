@@ -157,33 +157,48 @@
         
         /* Hero Section */
         .hero {
-            background:url('images/first-bg.png');
-            background-size: 100% 100%;
-            color: white;
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            padding: 120px 0;
             position: relative;
-            animation: slideShow 60s infinite;
-            
-            
+            height: 250px; /* fixed viewport band per request */
+            padding: 0; /* no inner padding so slider fills area */
+            overflow: hidden; /* hide any overflow to avoid background showing */
+            color: white;
         }
-        
-        @keyframes slideShow {
-            0% { background-image: url('images/first-bg.png'); }
-            33% { background-image: url('images/second-bg.png'); }
-            66% { background-image: url('images/third-bg.png'); }
-            100% { background-image: url('images/first-bg.png'); }
+
+        .hero-slider {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
         }
-        
-        
+
+        .slides-track {
+            display: flex;
+            height: 100%;
+            will-change: transform;
+            animation: hero-slide-left 30s linear infinite;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes hero-slide-left {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
         .hero-content{
-            display: none;
+            display: flex;
             gap: 20px;
             position: absolute;
             bottom: 10px;
             left: 150px;
+            z-index: 1; /* above slider */
         }
 
         /* About Section */
