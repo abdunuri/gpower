@@ -257,14 +257,13 @@
         }
 
         .about-advantage {
-        text-align: left;
-        padding: 2rem;
-        background-color: var(--light);
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        margin-bottom: 2rem;
-        margin-top: 0%;
-        background-size: cover;
+            text-align: left;
+            padding: 2rem;
+            background-color: var(--light);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-size: cover;
+            margin:0px 0 2rem 0px;
         }
 
 
@@ -329,7 +328,14 @@
         
         .stat-label {
             color: var(--gray);
+            font-size: 1.35rem;
             font-weight: 500;
+        }
+
+        .stat-item:hover,.stat-item:active,.stat-item:focus{
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background-color: #e8f5e9;
         }
         
         /* Products & Services */
