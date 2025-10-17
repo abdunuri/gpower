@@ -26,6 +26,9 @@ function initHeaderScripts() {
   if (mobileBtn && mainNav) {
     mobileBtn.addEventListener('click', () => {
       mainNav.classList.toggle('active');
+      mobileBtn.innerHTML = 
+      mainNav.classList.contains('active') ? 
+      `<i class="fas fa-times"></i>` : `<i class="fas fa-bars"></i>`;
     });
   }
 
