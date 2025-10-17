@@ -118,7 +118,7 @@
             margin: 0;
         }
         nav {
-            margin-left: 50px;
+            margin-left: 15px;
         }
         
         .logo-container span {
@@ -258,6 +258,7 @@
 
         .about-advantage {
             text-align: left;
+            padding-bottom: 0rem;
             padding: 2rem;
             background-color: var(--light);
             border-radius: 8px;
@@ -309,14 +310,27 @@
             padding: 20px;
             border-radius: 8px;
             background-size: cover;
+            margin-top: 0;
         }
         
         .stat-item {
+            display: flex;
             text-align: center;
             padding: 20px;
             background-color: var(--light);
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .stat-label i {
+            margin-bottom: 10px 10px;
+            color: var(--primary-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .stat-number {
@@ -539,7 +553,8 @@
         }
         
         .social-links a:hover {
-            background-color: var(--primary);
+            background-color: rgb(50, 237, 106);
+            text-decoration: none;
         }
         
         .copyright {

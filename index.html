@@ -12,26 +12,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo-container">
-                <img src="images/logo.png" alt="G-Power Logo" class="logo-image">
-                <h2 class="logo">G-<span>Power</span></h2>
-            </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <!-- Hero Section -->
 <section class="hero">
@@ -82,19 +63,20 @@
                 <div class="about-stats">
                     <div class="stat-item">
                         <div class="stat-number">12</div>
-                        <div class="stat-label">Departments</div>
+                        <div class="stat-label"><i class="fa-solid fa-building-columns"></i>Departments</div>
+                        
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">213</div>
-                        <div class="stat-label">Office Officers</div>
+                        <div class="stat-label"><i class="fa-solid fa-users"></i>Office Officers</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">545+</div>
-                        <div class="stat-label">Total Staff</div>
+                        <div class="stat-label"><i class="fa-solid fa-users"></i>Total Staff</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">24</div>
-                        <div class="stat-label">Total Products</div>
+                        <div class="stat-label"><i class="fa-solid fa-box"></i>Total Products</div>
                     </div>
                 </div>
             </div>
@@ -158,7 +140,7 @@
         <div class="container">
             <h2>Our Partners</h2>
             <div class="partners-logos">
-                <img src="images/Solis-logo.png" alt="Solis Logo" class="partner-logo">
+                <img src="images/SRNE-logo.png" alt="SRNE Logo" class="partner-logo">
                 <img src="images/Sako-logo.png" alt="Sako Logo" class="partner-logo">
                 <img src="images/Solis-logo.png" alt="Solis Logo" class="partner-logo">
             </div>
@@ -222,75 +204,8 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h4>G-Power</h4>
-                    <p>Leading Ethiopia's transition to clean, sustainable energy solutions for a brighter future.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Clean Energy Solutions</a></li>
-                        <li><a href="#">Energy Waste Systems</a></li>
-                        <li><a href="#">Consulting Services</a></li>
-                        <li><a href="#">Project Implementation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to our newsletter for the latest updates.</p>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; border-radius: 4px; border: none;">
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 G-Power Ethiopia. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            document.getElementById('mainNav').classList.toggle('active');
-        });
+   <div id="footer"></div>
+    <script src="index.js"></script>
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    document.getElementById('mainNav').classList.remove('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
