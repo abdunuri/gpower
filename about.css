@@ -74,6 +74,19 @@ section .product-categories{
     margin-top: 20px;
 }
 
+.category-card.Mini-card:hover,.category-card.Mini-card:focus-within,.category-card.Mini-card:focus{
+    transform: scale(1.1)
+}
+
+.category-card.Normal-card:hover,.category-card.Normal-card:focus-within,.category-card.Normal-card:focus{
+    transform: scale(1.1)
+}
+
+.category-card.Plus-card:hover,.category-card.Plus-card:focus-within,.category-card.Plus-card:focus{
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .category-card{
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -85,12 +98,6 @@ section .product-categories{
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.category-card:hover,.category-card:focus-within,.category-card:focus{
-    transform: translateY(10px);
-    transform: translateX(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .category-image{
@@ -175,6 +182,12 @@ section .product-categories{
 .mvv-item:hover,.mvv-item:focus-within,.mvv-item:focus{
     transform: translateY(10px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mvv-item:hover h3,.mvv-item:focus-within,.mvv-item:focus h3{
+    border-color: #388E3C;
+    color: #ffffff;
+    background-color: #388E3C;
 }
 
 .mvv-item i{
