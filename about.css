@@ -14,7 +14,7 @@
 }
 .about-hero-content{
     background-color: #f5f5f5;
-    padding: 60px 20px;
+    padding: 60px 0px;
     text-align: center;
     background-image: url('images/About-hero.jpeg');
     background-size: 200% 100%;
@@ -253,4 +253,31 @@ section .product-categories{
     font-size: 1rem;
     line-height: 1.6;
     color: #2b2828;
+}
+
+@media (min-width: 768px) {
+    .about-hero-content{
+        background-size: contain;
+        height:50px;
+
+    }
+    .categories-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+
+    }
+    .category-image{
+        width:100%;
+        max-width:400px;
+        height:auto;
+        display:block;
+        margin:20px auto;
+    }
+    .category-card{
+        padding: 20px;
+    }
+
+
+    
 }

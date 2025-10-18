@@ -125,75 +125,61 @@
         }
         
         /* Header Styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
         .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            margin: 0;
-        }
-        nav {
-            margin-left: 15px;
-        }
-        
-        .logo-container span {
-            display: inline-block;
-            color: var(--primary-light);
-            font-weight: 700;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: var(--primary);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--primary);
-        }
-        
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                flex-direction: column;
+            }
+            
+            nav ul li a {
+                text-decoration: none;
+                color: var(--dark);
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+            
+            nav ul li a:hover {
+                color: var(--primary);
+            }
+            
+            nav ul li {
+                margin: 0;
+                margin-bottom: 10px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background-color: transparent;
+                border: none;
+                font-size: 2rem;
+            }
+            
+            
         /* Hero Section */
         .hero {
             position: relative;
             overflow: hidden;
             width: 100vw;
-            height: 20vh;
+            height: 200px;
             display: flex;
             align-items: flex-end;
             justify-content: flex-end;
@@ -210,7 +196,6 @@
             animation: slideShow 60s infinite linear;
             animation-timing-function: ease-in-out;
         }
-
         .slide {
             width: 100%;
             height: 100%;
@@ -298,7 +283,8 @@
             background-color: var(--light);
             border-radius: 8px;
             box-shadow: 0 8px 8px rgba(1, 126, 20, 0.1);
-            background-size: cover;margin: 10px auto;
+            background-size: cover;
+            margin: 10px auto;
             margin-bottom: 3rem;
         }
 
@@ -388,7 +374,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             background-color: #e8f5e9;
         }
-        
+
         /* Products & Services */
 
         section.products-services {
@@ -629,47 +615,123 @@
         }
         
         /* Responsive Styles */
-        @media (max-width: 768px) {
-            .header-container {
+        @media (min-width: 768px) {
+            .divider#divider-vertical{
+            width: 2px;
+            border: 2px solid #4CAF50;
+            border-radius: 2px;
+            height: 460px;
+            }
+
+            header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            margin-left: 15px;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        .logo-container{
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .logo-container span {
+            display: inline-block;
+            color: var(--primary-light);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin-left: auto;
+        }
+        
+
+        
+        .mobile-menu-btn {
+            display: none;
+            
+        }  
+
+        .about-content {
                 flex-direction: column;
-                align-items: flex-start;
             }
             
-            nav {
-                width: 100%;
-                margin-top: 15px;
-                display: none;
-            }
-            
-            nav.active {
-                display: block;
-            }
-            
-            nav ul {
-                flex-direction: column;
-            }
-            
-            nav ul li {
-                margin: 0;
-                margin-bottom: 10px;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .hero h1 {
+        .hero h1 {
                 font-size: 2.2rem;
             }
             
-            h2 {
+        h2 {
                 font-size: 1.8rem;
+            }
+        
+            .hero {
+                width: 100%;
+                height: 30rem;
+            }
+
+            section.about-advantages-stats {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: stretch;
+                margin-left: 60px;
+                gap: 20px;
+                box-sizing: border-box;
+            }
+            
+            div.about-stats,div.about-advantage {
+                margin-top: 0;
+                margin-bottom: 0;
+                flex: 0 0 48%;
+                
+            }
+            div.about-advantage h4 {
+                font-size: 2.5rem;
+            }
+
+            div.about-advantage ul.advantage-list li {
+                padding-left: 10px;
+                font-size: 2rem;
+            }
+
+            section.products-services div.container div.ps-intro {
+                font-size: 1.3rem;
+                max-width: 800px;
+                display: block;
+                margin: 0 auto 20px;
             }
         }
