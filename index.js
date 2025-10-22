@@ -129,3 +129,47 @@ function initializeFAQ() {
         });
     });
 }
+
+// contacs page js
+// Form submission handling
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Basic form validation
+    const formData = new FormData(this);
+    let isValid = true;
+    
+    // Check required fields
+    const requiredFields = this.querySelectorAll('[required]');
+    requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+            isValid = false;
+            field.style.borderColor = 'red';
+        } else {
+            field.style.borderColor = '';
+        }
+    });
+    
+    if (isValid) {
+        // In a real application, you would send the form data to a server here
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+    } else {
+        alert('Please fill in all required fields.');
+    }
+});
+
+// Add loading state to form submission button
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    const submitBtn = this.querySelector('.btn');
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    // Reset button after 3 seconds (simulating form submission)
+    setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }, 3000);
+});
