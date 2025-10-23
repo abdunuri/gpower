@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - G-Power Ethiopia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header will be inserted via JavaScript -->
+    <header>
+    <div id="header"></div>
+    </header>
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our products, services, and clean energy solutions</p>
+        </div>
+    </section>
+
+    <!-- FAQ Main Section -->
+    <section class="faq-main">
+        <div class="container">
+            <!-- Search Section -->
+            <div class="faq-search">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="faqSearch" placeholder="Search for questions or topics...">
+                </div>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">All Questions</button>
+                <button class="category-btn" data-category="products">Products</button>
+                <button class="category-btn" data-category="services">Services</button>
+                <button class="category-btn" data-category="installation">Installation</button>
+                <button class="category-btn" data-category="support">Support</button>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="faq-accordion">
+                <!-- Products Category -->
+                <div class="faq-item" data-categories="products">
+                    <div class="faq-question">
+                        <h3>What types of batteries do you offer?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a comprehensive range of batteries including lithium-ion, lead-acid, and gel batteries suitable for various applications:</p>
+                        <ul>
+                            <li><strong>Lithium-ion Batteries:</strong> High efficiency, long lifespan (5-10 years), perfect for solar systems and EVs</li>
+                            <li><strong>Lead-Acid Batteries:</strong> Cost-effective, reliable performance for backup power systems</li>
+                            <li><strong>Gel Batteries:</strong> Maintenance-free, deep cycle capabilities for renewable energy storage</li>
+                        </ul>
+                        <p>All our batteries come with warranties and are optimized for Ethiopian climate conditions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-categories="products">
+                    <div class="faq-question">
+                        <h3>How efficient are your solar panels?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our solar panels feature high-efficiency monocrystalline technology with efficiency rates ranging from 19% to 22%. Key features include:</p>
+                        <ul>
+                            <li>High temperature coefficient performance</li>
+                            <li>Low light efficiency optimization</li>
+                            <li>25-year linear performance warranty</li>
+                            <li>Resistance to dust and harsh weather conditions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-categories="products">
+                    <div class="faq-question">
+                        <h3>What is the lifespan of your energy storage systems?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our energy storage systems are designed for longevity:</p>
+                        <ul>
+                            <li><strong>Lithium-ion Systems:</strong> 10+ years with 80% capacity retention</li>
+                            <li><strong>Lead-Acid Systems:</strong> 3-5 years with proper maintenance</li>
+                            <li><strong>Complete System:</strong> 15+ years with regular maintenance</li>
+                        </ul>
+                        <p>We provide comprehensive maintenance services to extend system lifespan.</p>
+                    </div>
+                </div>
+
+                <!-- Services Category -->
+                <div class="faq-item" data-categories="services">
+                    <div class="faq-question">
+                        <h3>Do you provide installation services?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide complete end-to-end installation services:</p>
+                        <ul>
+                            <li><strong>Site Assessment:</strong> Free technical evaluation of your location</li>
+                            <li><strong>System Design:</strong> Customized solutions based on your energy needs</li>
+                            <li><strong>Professional Installation:</strong> Certified technicians ensuring safety and quality</li>
+                            <li><strong>Commissioning:</strong> System testing and performance verification</li>
+                            <li><strong>Training:</strong> Comprehensive user training and documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-categories="services">
+                    <div class="faq-question">
+                        <h3>What maintenance services do you offer?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer comprehensive maintenance packages:</p>
+                        <ul>
+                            <li><strong>Regular Maintenance:</strong> Quarterly system checks and performance monitoring</li>
+                            <li><strong>Emergency Support:</strong> 24/7 technical support for critical issues</li>
+                            <li><strong>Preventive Maintenance:</strong> Scheduled component replacements and upgrades</li>
+                            <li><strong>Remote Monitoring:</strong> Real-time system performance tracking</li>
+                        </ul>
+                        <p>All maintenance services come with service level agreements.</p>
+                    </div>
+                </div>
+
+                <!-- Installation Category -->
+                <div class="faq-item" data-categories="installation">
+                    <div class="faq-question">
+                        <h3>How long does installation typically take?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Installation time varies based on system complexity:</p>
+                        <ul>
+                            <li><strong>Residential Solar Systems:</strong> 3-7 days</li>
+                            <li><strong>Commercial Systems:</strong> 2-4 weeks</li>
+                            <li><strong>EV Charging Stations:</strong> 2-5 days</li>
+                            <li><strong>Energy Storage Systems:</strong> 5-10 days</li>
+                        </ul>
+                        <p>We provide detailed project timelines during the consultation phase.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-categories="installation">
+                    <div class="faq-question">
+                        <h3>Do I need any permits for installation?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We handle all necessary permits and documentation:</p>
+                        <ul>
+                            <li>Building permits for structural modifications</li>
+                            <li>Electrical permits for system integration</li>
+                            <li>Environmental compliance certificates</li>
+                            <li>Utility interconnection agreements</li>
+                        </ul>
+                        <p>Our team manages the entire permit process on your behalf.</p>
+                    </div>
+                </div>
+
+                <!-- Support Category -->
+                <div class="faq-item" data-categories="support">
+                    <div class="faq-question">
+                        <h3>What is your warranty policy?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer comprehensive warranty coverage:</p>
+                        <ul>
+                            <li><strong>Products:</strong> 1-10 years depending on the product</li>
+                            <li><strong>Installation:</strong> 2-year workmanship warranty</li>
+                            <li><strong>Performance:</strong> 25-year linear warranty on solar panels</li>
+                            <li><strong>Support:</strong> Lifetime technical support</li>
+                        </ul>
+                        <p>All warranties are transferable to new property owners.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-categories="support">
+                    <div class="faq-question">
+                        <h3>How can I get technical support?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Multiple support channels are available:</p>
+                        <ul>
+                            <li><strong>Phone Support:</strong> +251 11 123 4567 (24/7 for emergencies)</li>
+                            <li><strong>Email Support:</strong> support@gpower-ethiopia.com</li>
+                            <li><strong>On-site Support:</strong> Scheduled technician visits</li>
+                            <li><strong>Remote Support:</strong> Online diagnostics and troubleshooting</li>
+                            <li><strong>Customer Portal:</strong> 24/7 access to resources and documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-categories="support">
+                    <div class="faq-question">
+                        <h3>Do you offer financing options?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer flexible financing solutions:</p>
+                        <ul>
+                            <li><strong>Equipment Financing:</strong> Up to 5-year payment plans</li>
+                            <li><strong>Lease Options:</strong> Monthly leasing with upgrade options</li>
+                            <li><strong>Power Purchase Agreements:</strong> Pay for the energy you use</li>
+                            <li><strong>Government Incentives:</strong> Assistance with green energy subsidies</li>
+                        </ul>
+                        <p>Contact our sales team for customized financing solutions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="faq-cta">
+                <div class="cta-content">
+                    <h2>Still Have Questions?</h2>
+                    <p>Can't find the answer you're looking for? Our team is here to help.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                        <a href="tel:+251111234567" class="btn btn-secondary">
+                            <i class="fas fa-phone"></i>
+                            Call Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be inserted via JavaScript -->
+    <footer>
+    <div id="footer"></div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

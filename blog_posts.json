@@ -1,0 +1,23 @@
+[
+  {
+    "id": 5,
+    "photo_path": "images/blog_20251022_223659_optimized.jpg",
+    "heading": "https://t.me/GPOWEROFFICAL",
+    "caption": "https://t.me/GPOWEROFFICAL",
+    "created_at": "2025-10-22 19:37:17"
+  },
+  {
+    "id": 4,
+    "photo_path": "images/blog_20251022_223033_optimized.jpg",
+    "heading": "📸 Let's create a blog post!",
+    "caption": "📸 Let's create a blog post!\n\nPlease send me the photo for your blog post.\n\n💡 Tip: For best results, send images under 5MB.📸 Let's create a blog post!\n\nPlease send me the photo for your blog post.\n\n💡 Tip: For best results, send images under 5MB.📸 Let's create a blog post!\n\nPlease send me the photo for your blog post.\n\n💡 Tip: For best results, send images under 5MB.📸 Let's create a blog post!\n\nPlease send me the photo for your blog post.\n\n💡 Tip: For best results, send images under 5MB.",
+    "created_at": "2025-10-22 19:31:08"
+  },
+  {
+    "id": 3,
+    "photo_path": "images/blog_20251022_221848_optimized.jpg",
+    "heading": "📸 Let's create a blog post!",
+    "caption": "📸 Let's create a blog post!\n\nPlease send me the photo for your blog post.\n\n💡 Tip: For best results, send images under 5MB.",
+    "created_at": "2025-10-22 19:19:08"
+  }
+]

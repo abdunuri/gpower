@@ -1,42 +1,171 @@
- <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h4>G-Power</h4>
-                    <p>Leading Ethiopia's transition to clean, sustainable energy solutions for a brighter future.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#">Clean Energy Solutions</a></li>
-                        <li><a href="#">Energy Waste Systems</a></li>
-                        <li><a href="#">Consulting Services</a></li>
-                        <li><a href="#">Project Implementation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to our newsletter for the latest updates.</p>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; border-radius: 4px; border: none;">
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 G-Power Ethiopia. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+<footer class="gpower-footer">
+  <style>
+    /* === Scoped Footer Styles === */
+    .gpower-footer {
+      background-color: #1B5E20;
+      color: white;
+      padding: 0px 0 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .gpower-footer .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .gpower-footer .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .gpower-footer .footer-col h4::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 2px;
+      background-color: #FFC107;
+    }
+
+    .gpower-footer .footer-col p {
+      color: #E0E0E0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .gpower-footer .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .gpower-footer .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .gpower-footer .footer-col ul li a {
+      color: #E0E0E0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .gpower-footer .footer-col ul li a:hover {
+      color: white;
+    }
+
+    .gpower-footer .footer-contact p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #E0E0E0;
+    }
+
+    .gpower-footer .footer-contact i {
+      margin-right: 10px;
+      color: #FFC107;
+      font-size: 1.1rem;
+    }
+
+    .gpower-footer .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gpower-footer .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .gpower-footer .social-links a:hover {
+      background-color: #2E7D32;
+    }
+
+    .gpower-footer .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #E0E0E0;
+      font-size: 0.9rem;
+      margin-top: 0px;
+    }
+
+    @media (max-width: 768px) {
+      .gpower-footer .footer-container {
+        grid-template-columns: 1fr;
+        /* text-align: center; */
+        margin-left: 20px;
+      }
+
+      /* .gpower-footer .footer-contact p {
+        justify-content: center;
+      } */
+
+      .gpower-footer .social-links {
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>G-Power Ethiopia</h4>
+      <p>Leading Ethiopia's transition to clean, sustainable energy solutions for a brighter future.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Products</h4>
+      <ul>
+        <li><a href="#">Battery Products</a></li>
+        <li><a href="#">PV Modules</a></li>
+        <li><a href="#">Inverter Products</a></li>
+        <li><a href="#">Energy Storage Systems</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <div class="footer-contact">
+        <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+        <p><i class="fas fa-phone"></i> +251 11 123 4567</p>
+        <p><i class="fas fa-envelope"></i> info@gpower-ethiopia.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>&copy; 2025 G-Power Ethiopia. All Rights Reserved.</p>
+  </div>
+</footer>

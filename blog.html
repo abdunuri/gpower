@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - G-Power Ethiopia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --primary-light: #4CAF50;
+            --primary-dark: #1B5E20;
+            --secondary: #FFC107;
+            --dark: #212121;
+            --light: #FAFAFA;
+            --gray: #757575;
+            --gray-light: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100vw;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.8)), url('images/blog-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .blog-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .blog-header p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Blog Container */
+        .blog-container {
+            padding: 80px 0;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr,1fr;
+            gap: 40px;
+
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--gray);
+        }
+
+        .loading-spinner {
+            border: 4px solid var(--gray-light);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Blog Post Styles
+        .blog-post {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        } */
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* .blog-post-image {
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+        } */
+.blog-post {
+  width: 100%;
+  max-width: 800px; /* Optional: control total blog width */
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden; /* Ensures image corners stay rounded */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+  width: 100%;
+  height: 400px; /* Fixed height keeps consistent look */
+  object-fit: cover; /* 🔥 Key trick: fills area but keeps aspect ratio */
+  display: block;
+}
+
+
+
+
+        .blog-post-content {
+            padding: 30px;
+        }
+
+        .blog-post-title {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .blog-post-caption {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-light);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .blog-post-date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .no-posts {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--gray);
+        }
+
+        .no-posts i {
+            font-size: 4rem;
+            color: var(--gray-light);
+            margin-bottom: 20px;
+        }
+
+        .refresh-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .refresh-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-header {
+                padding: 80px 0;
+            }
+
+            .blog-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .blog-container {
+                padding: 60px 0;
+            }
+
+            .blog-post-image {
+                height: 300px;
+            }
+
+            .blog-post-content {
+                padding: 20px;
+            }
+
+            .blog-post-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-post-meta {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header will be inserted via JavaScript -->
+    <div id="header"></div>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <h1>G-Power Blog</h1>
+            <p>Latest updates, news, and insights about clean energy in Ethiopia</p>
+        </div>
+    </section>
+
+    <!-- Blog Container -->
+    <section class="blog-container">
+        <div class="container">
+            <div id="blogPosts">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading blog posts...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be inserted via JavaScript -->
+    <div id="footer"></div>
+
+    <script>
+        // Load header and footer
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Load header
+        //     fetch('header.html')
+        //         .then(response => response.text())
+        //         .then(data => {
+        //             document.getElementById('header').innerHTML = data;
+        //             initializeHeader();
+        //         });
+
+        //     // Load footer
+        //     fetch('footer.html')
+        //         .then(response => response.text())
+        //         .then(data => {
+        //             document.getElementById('footer').innerHTML = data;
+        //         });
+
+        //     // Load blog posts
+        //     
+        // });
+
+        // function initializeHeader() {
+        //     // Mobile menu toggle
+        //     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        //     const mainNav = document.getElementById('mainNav');
+            
+        //     if (mobileMenuBtn && mainNav) {
+        //         mobileMenuBtn.addEventListener('click', function() {
+        //             mainNav.classList.toggle('active');
+        //         });
+        //     }
+
+        //     // Set active link
+        //     const currentPage = window.location.pathname.split('/').pop();
+        //     const navLinks = document.querySelectorAll('nav a');
+            
+        //     navLinks.forEach(link => {
+        //         const linkPage = link.getAttribute('href');
+        //         if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+        //             link.classList.add('active');
+        //         }
+        //     });
+        // }
+
+        // Load blog posts from server
+        loadBlogPosts();
+        async function loadBlogPosts() {
+            const blogPostsContainer = document.getElementById('blogPosts');
+            
+            try {
+                // You can use either JSON file or API endpoint
+                const response = await fetch('blog_posts.json');
+                
+                if (!response.ok) {
+                    throw new Error('Failed to load posts');
+                }
+                
+                const posts = await response.json();
+                
+                if (posts.length === 0) {
+                    blogPostsContainer.innerHTML = `
+                        <div class="no-posts">
+                            <i class="fas fa-newspaper"></i>
+                            <h3>No blog posts yet</h3>
+                            <p>Check back later for updates!</p>
+                            <button class="refresh-btn" onclick="loadBlogPosts()">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                // Generate HTML for posts
+                let postsHTML = '';
+                
+                posts.forEach(post => {
+                    const date = new Date(post.created_at).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                    
+                    postsHTML += `
+                        <div class="blog-post" data-post-id="${post.id}">
+                            <img src="${post.photo_path}" alt="${post.heading}" class="blog-post-image">
+                            <div class="blog-post-content">
+                                <h2 class="blog-post-title">${post.heading}</h2>
+                                <p class="blog-post-caption">${post.caption}</p>
+                                <div class="blog-post-meta">
+                                    <div class="blog-post-date">
+                                        <i class="far fa-calendar"></i>
+                                        ${date}
+                                    </div>
+                                    <div class="blog-post-id">
+                                        Post #${post.id}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                blogPostsContainer.innerHTML = postsHTML;
+                
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                blogPostsContainer.innerHTML = `
+                    <div class="no-posts">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Unable to load posts</h3>
+                        <p>Please try again later.</p>
+                        <button class="refresh-btn" onclick="loadBlogPosts()">
+                            <i class="fas fa-sync-alt"></i> Try Again
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        // Auto-refresh posts every 5 minutes
+        setInterval(loadBlogPosts, 300000);
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

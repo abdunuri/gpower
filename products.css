@@ -1,0 +1,48 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-hero-content{
+    background-color: #f5f5f5;
+    padding: 60px 0px;
+    text-align: center;
+    background-image: url('images/About-hero.jpeg');
+    background-size: 200% 100%;
+    background-position: center;
+    height: 60px;
+    width: 100%;
+}
+
+.products-grid {
+  columns: 3; /* number of columns */
+  column-gap: 16px;
+}
+
+.product-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+   @media (min-width: 768px) {
+    .about-hero-content{
+        background-size: contain;
+        height:50px;}
+ }
